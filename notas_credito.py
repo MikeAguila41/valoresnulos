@@ -5,9 +5,9 @@ import numpy as np
 df = pd.read_excel("notas_credito.xlsx")
 
 #print(df.head())
-print(df.info())
+#print(df.info())
 #print(df.describe())
-print(df.isnull().sum())
+#print(df.isnull().sum())
 
 #Quitar nulos
 
