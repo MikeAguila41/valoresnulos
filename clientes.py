@@ -13,10 +13,12 @@ df = pd.read_excel("clientes.xlsx")
 
 #Para RFC voy a sustituir el valor nulo con un cero, ya que no es una columna numérica y no podemos aplicar algún método
 df['RFC'] = df['RFC'].fillna(0)
-valores_nulos = df.isnull().sum()
 
 #Para NOMBRE también voy a sustituir el valor nulo con un cero, ya que no es una columna numérica y no podemos aplicar algún método
 df['NOMBRE'] = df['NOMBRE'].fillna(0)
-valores_nulos = df.isnull().sum()
 
+valores_nulos = df.isnull().sum()
 print(valores_nulos)
+
+#Convertir DataFrame a CSV
+df.to_excel('clientes_limpio.xlsx')
